@@ -3,7 +3,7 @@ import Link from 'next/link';
 const OfferItem = ({ imageSrc, badgeSrc, reviewCount, linkHref, title, duration }) => (
   <div className='offer-single sibling-2'>
     <img src={imageSrc} className='offer-bg' alt='image' />
-    <img src={badgeSrc} className='offer-badge' alt='image' />
+    {/* <img src={badgeSrc} className='offer-badge' alt='image' /> */}
     <div className='content'>
       <div className='review-area sibling-2'>
         <ul className='star-list'>
@@ -18,9 +18,7 @@ const OfferItem = ({ imageSrc, badgeSrc, reviewCount, linkHref, title, duration 
         </ul>
         <span>{reviewCount} Review</span>
       </div>
-      <Link href={linkHref}>
-        <a>{title}</a>
-      </Link>
+      <a>{title}</a>
       <span>{duration}</span>
     </div>
   </div>

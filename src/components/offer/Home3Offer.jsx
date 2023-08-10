@@ -1,45 +1,27 @@
-import React from 'react';
+import React, { useState } from 'react';
 import SwiperCore, { Autoplay, Navigation, Pagination } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { offerSlider } from '../../utils/offerSlider';
 import OfferItem from './OfferItem';
+import Modal from '../modal/Modal';
+import { offers } from './ProjectData';
+
 SwiperCore.use([Navigation, Pagination, Autoplay]);
 
 function Home3Offer() {
-  const offers = [
-    {
-      imageSrc: 'assets/images/bg/offer-bg1.png',
-      badgeSrc: 'assets/images/bg/offer-badge1.svg',
-      reviewCount: 10,
-      linkHref: '/tour-package-details',
-      title: 'Palermojai',
-      duration: '03 days / from $2500',
-    },
-    {
-      imageSrc: 'assets/images/bg/offer-bg2.png',
-      badgeSrc: 'assets/images/bg/offer-badge2.svg',
-      reviewCount: 10,
-      linkHref: '/tour-package-details',
-      title: 'WebGeenix',
-      duration: '5 days / from $900',
-    },
-    {
-      imageSrc: 'assets/images/bg/offer-bg3.png',
-      badgeSrc: 'assets/images/bg/offer-badge3.svg',
-      reviewCount: 10,
-      linkHref: '/tour-package-details',
-      title: 'PsicoApp',
-      duration: '2 days / from $900',
-    },
-    {
-      imageSrc: 'assets/images/bg/offer-bg3.png',
-      badgeSrc: 'assets/images/bg/offer-badge3.svg',
-      reviewCount: 10,
-      linkHref: '/tour-package-details',
-      title: 'Vicla SA',
-      duration: '2 days / from $900',
-    },
-  ];
+  const [modalOpen, setModalOpen] = useState(false);
+  const [selectedProject, setSelectedProject] = useState(null);
+
+  const openModal = (project) => {
+    setSelectedProject(project);
+    setModalOpen(true);
+  };
+
+  // Función para cerrar el modal
+  const closeModal = () => {
+    setModalOpen(false);
+    setSelectedProject(null);
+  };
 
   return (
     <div className='offer-section sibling-2 pt-120 pb-120'>
@@ -56,14 +38,15 @@ function Home3Offer() {
           <div className='col-12 '>
             <Swiper {...offerSlider} className='swiper offer-slider'>
               <div className='swiper-wrapper'>
-                {offers.map((offer, index) => (
-                  <SwiperSlide key={index} className='swiper-slide'>
+                {offers?.map((offer, index) => (
+                  <SwiperSlide key={index} className='swiper-slide' onClick={() => openModal(offer)}>
                     <OfferItem {...offer} />
                   </SwiperSlide>
                 ))}
               </div>
             </Swiper>
           </div>
+          {modalOpen && <Modal isOpen={modalOpen} onClose={closeModal} project={selectedProject} />}
         </div>
       </div>
     </div>
