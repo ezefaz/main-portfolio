@@ -422,7 +422,7 @@ i.bx {
   text-align: center;
   line-height: 46px;
   font-size: 28px;
-  color: var(--primary-color1);
+  color: var(--primary-color2);
   left: 0;
   top: 0;
   height: 46px;
@@ -443,7 +443,7 @@ i.bx {
   fill: none;
 }
 .circle-container svg.circle-progress path {
-  stroke: var(--primary-color1);
+  stroke: var(--primary-color2);
   stroke-width: 5;
   box-sizing: border-box;
   transition: all 200ms linear;
@@ -455,10 +455,10 @@ i.bx {
   stroke: var(--primary-color2);
 }
 .circle-container.sibling-3::after {
-  color: var(--primary-color3);
+  color: var(--primary-color2);
 }
 .circle-container.sibling-3 svg.circle-progress path {
-  stroke: var(--primary-color3);
+  stroke: var(--primary-color2);
 }
 
 /*=======================================
@@ -7412,7 +7412,7 @@ form.style-1 .form-inner textarea {
 .footer-section .footer-bottom p .egns-lab, .footer-section .footer-bottom .info-single .info-text a .egns-lab, .info-single .info-text .footer-section .footer-bottom a .egns-lab {
   font-size: 13px;
   font-weight: 500;
-  color: var(--primary-color1);
+  color: var(--primary-color2);
 }
 .footer-section .footer-bottom .footer-logo-list {
   margin: 0;
@@ -8279,7 +8279,7 @@ h3.blog-details-subtitle {
  Testimonial-section  
 =======================================*/
 .testimonial-section .swiper {
-  padding: 12px;
+  padding: 6rem;
   margin: -12px;
 }
 .testimonial-section .testimonial-wrapper {

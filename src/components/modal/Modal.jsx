@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 
 const Modal = ({ project, isOpen, onClose, disabled }) => {
   const handleBackdropClick = () => {
@@ -7,8 +7,21 @@ const Modal = ({ project, isOpen, onClose, disabled }) => {
     }
   };
 
+  useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'unset';
+    }
+
+    // Clean up the effect
+    return () => {
+      document.body.style.overflow = 'unset';
+    };
+  }, [isOpen]);
+
   if (!isOpen) {
-    return;
+    return null; // Return null when the modal is closed
   }
 
   return (

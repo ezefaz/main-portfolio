@@ -1,6 +1,6 @@
-import Link from 'next/link';
 import { useRouter } from 'next/router';
 import React from 'react';
+
 function Footer1() {
   const router = useRouter();
   const currentRoute = router.pathname;
@@ -14,11 +14,11 @@ function Footer1() {
       : 'footer-section';
   return (
     <footer className={sibling}>
-      <div className='footer-top'>
+      {/* <div className='footer-top'>
         <div className='container-xl container-lg-fluid container'>
           <div className='row justify-content-center gy-5'>
             <div className='col-lg-3 col-md-10 col-sm-6 col-11 order-sm-0 order-1'>
-              {/* <div className='footer-about'>
+              <div className='footer-about'>
                 <img src='assets/images/icons/footer-plane.svg' className='footer-plane' alt='image' />
                 <div className='footer1-logo'>
                   <img src='assets/images/icons/footer1-logo.svg' alt='image' />
@@ -39,7 +39,7 @@ function Footer1() {
                     </textPath>
                   </text>
                 </svg>
-              </div> */}
+              </div>
             </div>
             <div className='col-lg-3 col-md-4 col-sm-6 d-flex justify-content-lg-center'>
               <div className='footer-item'>
@@ -182,7 +182,7 @@ function Footer1() {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
       <div className='container'>
         <div className='footer-bottom'>
           <div className='row d-flex align-items-center g-3'>
@@ -190,12 +190,12 @@ function Footer1() {
               <p>
                 Copyright 2022{' '}
                 <a href='#' className='egns-lab'>
-                  Astrip{' '}
+                  Ezequiel Fasczczak{' '}
                 </a>{' '}
-                | Design By{' '}
+                {/* | Design By{' '}
                 <a href='https://themeforest.net/category/site-templates?term=egenslab' className='egns-lab'>
                   Egens Lab
-                </a>
+                </a> */}
               </p>
             </div>
             <div className='col-lg-6 d-flex justify-content-lg-end justify-content-center align-items-center'>

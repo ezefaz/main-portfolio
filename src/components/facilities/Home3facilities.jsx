@@ -1,6 +1,53 @@
 import React from 'react';
 
+function Facility({ iconSrc, title, description }) {
+  return (
+    <div className='facility-single col-lg-4 col-md-6 col-sm-10'>
+      <div className='icon'>
+        <img src={iconSrc} alt='image' />
+      </div>
+      <div className='text'>
+        <h4>{title}</h4>
+        <p>{description}</p>
+      </div>
+    </div>
+  );
+}
+
 function Home3facilities() {
+  const facilitiesData = [
+    {
+      iconSrc: 'assets/images/icons/facility1.svg',
+      title: 'Frameworks',
+      description: 'React Js, Next Js',
+    },
+    {
+      iconSrc: 'assets/images/icons/facility2.svg',
+      title: 'Next Js',
+      description: 'Lorem ipsum dolor sit amet, stsrf consec adi piscing elit',
+    },
+    {
+      iconSrc: 'assets/images/icons/facility3.svg',
+      title: 'Node Js',
+      description: 'Lorem ipsum dolor sit amet, stsrf consec adi piscing elit',
+    },
+    {
+      iconSrc: 'assets/images/icons/facility4.svg',
+      title: 'State Management',
+      description: 'Redux, Zustand',
+    },
+    {
+      iconSrc: 'assets/images/icons/facility5.svg',
+      title: 'SQL',
+      description: 'Lorem ipsum dolor sit amet, stsrf consec adi piscing elit',
+    },
+    {
+      iconSrc: 'assets/images/icons/facility6.svg',
+      title: 'Testing',
+      description: 'Cypress, Mocha',
+    },
+  ];
+
   return (
     <div className='facilities-section'>
       <div className='container'>
@@ -13,72 +60,14 @@ function Home3facilities() {
           </div>
         </div>
         <div className='row g-4 justify-content-center'>
-          <div className='col-lg-4 col-lg-4 col-md-6 col-sm-10'>
-            <div className='facility-single'>
-              <div className='icon'>
-                <img src='assets/images/icons/facility1.svg' alt='image' />
-              </div>
-              <div className='text'>
-                <h4>Frameworks</h4>
-                <p>React Js , Next Js</p>
-              </div>
-            </div>
-          </div>
-          <div className='col-lg-4 col-md-6 col-sm-10'>
-            <div className='facility-single'>
-              <div className='icon'>
-                <img src='assets/images/icons/facility2.svg' alt='image' />
-              </div>
-              <div className='text'>
-                <h4>Next Js</h4>
-                <p>Lorem ipsum dolor sit amet, stsrf consec adi piscing elit</p>
-              </div>
-            </div>
-          </div>
-          <div className='col-lg-4 col-md-6 col-sm-10'>
-            <div className='facility-single'>
-              <div className='icon'>
-                <img src='assets/images/icons/facility3.svg' alt='image' />
-              </div>
-              <div className='text'>
-                <h4>Node Js</h4>
-                <p>Lorem ipsum dolor sit amet, stsrf consec adi piscing elit</p>
-              </div>
-            </div>
-          </div>
-          <div className='col-lg-4 col-md-6 col-sm-10'>
-            <div className='facility-single'>
-              <div className='icon'>
-                <img src='assets/images/icons/facility4.svg' alt='image' />
-              </div>
-              <div className='text'>
-                <h4>State Management</h4>
-                <p>Redux, Zustand</p>
-              </div>
-            </div>
-          </div>
-          <div className='col-lg-4 col-md-6 col-sm-10'>
-            <div className='facility-single'>
-              <div className='icon'>
-                <img src='assets/images/icons/facility5.svg' alt='image' />
-              </div>
-              <div className='text'>
-                <h4>SQL</h4>
-                <p>Lorem ipsum dolor sit amet, stsrf consec adi piscing elit</p>
-              </div>
-            </div>
-          </div>
-          <div className='col-lg-4 col-md-6 col-sm-10'>
-            <div className='facility-single'>
-              <div className='icon'>
-                <img src='assets/images/icons/facility6.svg' alt='image' />
-              </div>
-              <div className='text'>
-                <h4>Testing</h4>
-                <p>Cypress, Mocha</p>
-              </div>
-            </div>
-          </div>
+          {facilitiesData.map((facility, index) => (
+            <Facility
+              key={index}
+              iconSrc={facility.iconSrc}
+              title={facility.title}
+              description={facility.description}
+            />
+          ))}
         </div>
       </div>
     </div>

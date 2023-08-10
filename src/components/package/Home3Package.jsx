@@ -53,8 +53,8 @@ function Home3Package() {
     },
   };
   return (
-    <div className='tour-package-section2 pt-120 pb-120'>
-      <div className='container'>
+    <div className='tour-package-section2 pt-0 pb-0'>
+      <div className='container p-12'>
         <div className='row justify-content-start align-items-center mb-60'>
           <div className='col-lg-6 col-md-8 text-md-start text-center'>
             <div className='section-title3 d-flex flex-column justify-content-center mb-0'>

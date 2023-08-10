@@ -8,7 +8,7 @@ export const offers = [
     title: 'Palermojai',
     duration: '03 days / from $2500',
     description:
-      'Palermojai is a modern web application designed to help people discover and book their dream vacations. Explore our selection of stunning destinations and enjoy the best travel experience.',
+      'PalermoJai, a new and ambitious business specializing in fully furnished temporary apartments, approached us with a vision to establish a strong online presence and boost reservations. Their goal was to create a captivating website that showcased the allure of their apartments and provided a seamless booking experience for either their local and tourist guests. With enthusiasm and determination, we embraced the challenge, partnering closely with PalermoJai to understand their unique offerings and target audience. As a new business, they sought to make a lasting impression in the competitive market of temporary lodging.',
     technologies: 'React, Node.js, MongoDB',
   },
   {

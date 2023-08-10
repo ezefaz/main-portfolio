@@ -3,22 +3,23 @@ import Link from 'next/link';
 import { useRouter } from 'next/router';
 import React, { useEffect, useReducer, useState } from 'react';
 import Home3Video from '../../public/video/Home3Video';
-import Banner3 from '../components/banner/Banner3';
+import HeroSection from '../components/banner/Banner3';
 import Home3Blog from '../components/blog/Home3Blog';
 import Preloader from '../components/common/Preloader';
 import Home3Destination from '../components/destination/Home3Destination';
-import Home3facilities from '../components/facilities/Home3facilities';
-import Home3Feature from '../components/feature/Home3Feature';
-import Footer1 from '../components/footer/Footer1';
+import TechStack from '../components/facilities/Home3facilities';
+import AboutSection from '../components/feature/Home3Feature';
+import Footer from '../components/footer/Footer1';
 import Home3Guide from '../components/guide/Home3Guide';
 import Home3Newslatter from '../components/home/Home3Newslatter';
-import Home3Offer from '../components/offer/Home3Offer';
-import Home3Package from '../components/package/Home3Package';
-import Sponsor from '../components/sponsor/Sponsor';
-import Home2Testimonial from '../components/testimonial/Home2Testimonial';
+import LatestWork from '../components/offer/Home3Offer';
+import Services from '../components/package/Home3Package';
+import TechCaroussel from '../components/sponsor/Sponsor';
+import Testimonials from '../components/testimonial/Home2Testimonial';
 import ContactForm from '../components/contact/ContactForm';
 import Modal from '../components/modal/Modal';
 import MainNav from '../components/header/MainNav';
+import ScrollProgrssBtn from '../components/common/ScrollProgrssBtn';
 
 function IndexCityTour() {
   const projectImages = [
@@ -70,7 +71,6 @@ function IndexCityTour() {
 
           <div className='page-wrapper'>
             <MainNav />
-
             <div className='main-content-area'>
               <header className='style-3'>
                 <div className='nav-right d-flex jsutify-content-end align-items-center gap-5'>
@@ -141,16 +141,17 @@ function IndexCityTour() {
                   </ul>
                 </div>
               </header>
-              <Banner3 />
-              <Home3Offer />
-              <Home3Feature />
-              <Home3Destination />
-              <Home3Package />
-              <Home3facilities />
-              <Sponsor />
-              <Home2Testimonial />
+              <HeroSection />
+              <LatestWork />
+              <AboutSection />
+              {/* <Home3Destination /> */}
+              <Services />
+              <TechStack />
+              <TechCaroussel />
+              <Testimonials />
               <ContactForm />
-              <Footer1 />
+              <Footer />
+              <ScrollProgrssBtn />
             </div>
           </div>
         </>

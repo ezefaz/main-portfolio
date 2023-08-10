@@ -28,9 +28,7 @@ function MainNav() {
 
   const [state, dispatch] = useReducer(reducer, initialState);
   const [showMobileMenu, setMobileMenu] = useState(false);
-  const [showsubMenu, setsubMenu] = useState(false);
   const [loading, setLoading] = useState();
-  const currentRoute = router.pathname;
 
   useEffect(() => {
     setLoading(!loading);
@@ -47,143 +45,67 @@ function MainNav() {
       setMobileMenu(false);
     }
   };
-  const handleSubMenu = () => {
-    if (showsubMenu === false || showsubMenu === 0) {
-      setsubMenu(1);
-    } else {
-      setsubMenu(false);
-    }
-  };
+
   return (
-    <div className='main-nav-wrapper'>
-      <div className={showMobileMenu ? 'main-nav show-menu ' : 'main-nav'}>
+    <nav className='main-nav-wrapper'>
+      <div className={`main-nav ${showMobileMenu ? 'show-menu' : ''}`}>
         <div className='menu-close-btn' onClick={handleMobileMenu}>
-          <i className='bi bi-x-lg' />
-        </div>
-        <div className='mobile-logo-area d-flex justify-content-xl-center justify-content-start align-items-center'>
-          {/* <div className='header-logo'>
-          <Link href='/'>
-            <a>
-              <img alt='image' className='img-fluid' src='assets/images/icons/header4-logo.svg' />
-            </a>
-          </Link>
-        </div> */}
+          <i className='bi bi-x-lg'></i>
         </div>
         <ul className='menu-list'>
-          <li className='menu-item-has-children'>
-            <Link href='#'>
-              <a className='drop-down'>
-                <img src='assets/images/icons/home-icon.svg' alt='image' />
+          <li>
+            <Link href='/'>
+              <a className={router.pathname === '/' ? 'active' : ''}>
+                <img src='assets/images/icons/home-icon.svg' alt='Home' />
                 Home
               </a>
             </Link>
           </li>
-          <li className='menu-item-has-children'>
+          <li>
             <Link href='/destination'>
-              <a
-                className={
-                  currentRoute === '/destination' || currentRoute === '/destination-details'
-                    ? 'drop-down active'
-                    : 'drop-down disabled'
-                }
-              >
-                <img src='assets/images/icons/desitnation-icon.svg' alt='image'></img>
+              <a className={router.pathname.includes('/destination') ? 'active' : ''}>
+                <img src='assets/images/icons/desitnation-icon.svg' alt='Work' />
                 Work
               </a>
             </Link>
           </li>
-          <li className='menu-item-has-children'>
-            <Link href='#'>
-              <a
-                className={
-                  currentRoute === '/tour-package' ||
-                  currentRoute === '/tour-package2' ||
-                  currentRoute === '/tour-package-sidebar' ||
-                  currentRoute === '/tour-package-details'
-                    ? 'drop-down active'
-                    : 'drop-down disabled'
-                }
-              >
-                <img src='assets/images/icons/tour-icon.svg' alt='image' />
+          <li>
+            <Link href='/tour-package'>
+              <a className={router.pathname.includes('/tour-package') ? 'active' : ''}>
+                <img src='assets/images/icons/tour-icon.svg' alt='Experiences' />
                 Experiences
               </a>
             </Link>
           </li>
-          <li className='menu-item-has-children'>
-            <Link href='#'>
+          <li>
+            <Link href='/about'>
               <a
                 className={
-                  currentRoute === 'about' ||
-                  currentRoute === '/tour-guide' ||
-                  currentRoute === '/gallery' ||
-                  currentRoute === 'faq' ||
-                  currentRoute === '/error'
-                    ? 'drop-down active '
-                    : 'drop-down disabled'
+                  router.pathname.includes('/about') ||
+                  router.pathname.includes('/tour-guide') ||
+                  router.pathname.includes('/gallery') ||
+                  router.pathname.includes('/faq') ||
+                  router.pathname.includes('/error')
+                    ? 'active'
+                    : ''
                 }
               >
-                <img src='assets/images/icons/pages.svg' alt='images' />
+                <img src='assets/images/icons/pages.svg' alt='Testimonials' />
                 Testimonials
               </a>
             </Link>
           </li>
-          {/* <li className='menu-item-has-children'>
-          <Link href='/blog-grid'>
-            <a
-              className={
-                currentRoute === '/blog-grid' ||
-                currentRoute === '/blog-standard' ||
-                currentRoute === '/blog-details'
-                  ? 'drop-down active '
-                  : 'drop-down disabled'
-              }
-            >
-              <img src='assets/images/icons/blog-icon.svg' alt='image' />
-              Blog
-            </a>
-          </Link>
-          <i
-            className={
-              state.activeMenu === 'blog'
-                ? 'bi bi-chevron-up dropdown-icon'
-                : 'bi bi-chevron-down dropdown-icon'
-            }
-            onClick={() => dispatch({ type: 'blog' })}
-          />
-          <ul className={state.activeMenu === 'blog' ? 'sub-menu d-block' : 'sub-menu'}>
-            <li>
-              <Link href='/blog-grid'>
-                <a>Blog Grid</a>
-              </Link>
-            </li>
-            <li>
-              <Link href='/blog-standard'>
-                <a>Blog Standard</a>
-              </Link>
-            </li>
-            <li>
-              <Link href='/blog-details'>
-                <a>Blog Details</a>
-              </Link>
-            </li>
-          </ul>
-        </li> */}
           <li>
             <Link href='/contact'>
-              <a className={currentRoute === '/contact' ? 'active' : 'disabled'}>
-                <img src='assets/images/icons/contact-icon.svg' alt='image' />
+              <a className={router.pathname === '/contact' ? 'active' : ''}>
+                <img src='assets/images/icons/contact-icon.svg' alt='Contact' />
                 Contact
               </a>
             </Link>
           </li>
         </ul>
-        {/* <Link href='/login'>
-        <a className='uesr-aera'>
-          <i className='bi bi-person-circle' />
-        </a>
-      </Link> */}
       </div>
-    </div>
+    </nav>
   );
 }
 

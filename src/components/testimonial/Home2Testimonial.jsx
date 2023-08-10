@@ -12,11 +12,11 @@ function Home2Testimonial() {
     roundLengths: true,
     pagination: {
       el: '.swiper-pagination',
-      clickable: 'true',
+      clickable: true,
     },
     navigation: {
-      nextEl: '.testi2-next',
-      prevEl: '.testi2-prev',
+      nextEl: '.package2-prev',
+      prevEl: '.package2-next',
     },
     breakpoints: {
       280: {
@@ -180,12 +180,14 @@ function Home2Testimonial() {
                 </SwiperSlide>
               </div>
             </Swiper>
-            <div className='slider-arrows arrows-style-3 text-center d-xl-flex d-none flex-row justify-content-between align-items-center w-100'>
-              <div className='testi2-prev swiper-prev-arrow' tabIndex={0} role='button' aria-label='Previous slide'>
-                <i className='bi bi-arrow-left' />
-              </div>
-              <div className='testi2-next swiper-next-arrow' tabIndex={0} role='button' aria-label='Next slide'>
-                <i className='bi bi-arrow-right' />
+            <div className='col-lg-6 col-md-4'>
+              <div className='slider-arrows arrows-style-4 text-center d-md-flex d-none flex-row gap-5 justify-content-end align-items-center pt-1'>
+                <div className='package2-prev swiper-prev-arrow' tabIndex={0} role='button' aria-label='Previous slide'>
+                  <i className='bi bi-arrow-left' />
+                </div>
+                <div className='package2-next swiper-next-arrow' tabIndex={0} role='button' aria-label='Next slide'>
+                  <i className='bi bi-arrow-right' />
+                </div>
               </div>
             </div>
           </div>
