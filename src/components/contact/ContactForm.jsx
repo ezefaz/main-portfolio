@@ -2,12 +2,12 @@ import React from 'react';
 
 function ContactForm() {
   return (
-    <div className='contact-section pb-120'>
+    <div className='contact-section pb-120' id='contact'>
       <div className='container'>
         <div className='row justify-content-center'>
           <div className='col-md-6 text-center'>
             <div className='section-title2'>
-              <span>Reservation Form</span>
+              <span>Contact Form</span>
               <h2>Let’s Get in Touch</h2>
               {/* <img src='assets/images/icons/section-title-vector.svg' alt='image' /> */}
             </div>
@@ -20,12 +20,12 @@ function ContactForm() {
                 <div className='row'>
                   <div className='col-lg-6'>
                     <div className='form-inner'>
-                      <input type='text' placeholder='Your Name:' />
+                      <input type='text' placeholder='Name:' />
                     </div>
                   </div>
                   <div className='col-lg-6'>
                     <div className='form-inner'>
-                      <input type='text' placeholder='Your Phone Number:' />
+                      <input type='email' placeholder='Email:' />
                     </div>
                   </div>
                   <div className='col-lg-12'>

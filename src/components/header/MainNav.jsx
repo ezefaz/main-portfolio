@@ -62,42 +62,32 @@ function MainNav() {
             </Link>
           </li>
           <li>
-            <Link href='/destination'>
-              <a className={router.pathname.includes('/destination') ? 'active' : ''}>
+            <Link href='#work'>
+              <a className={router.pathname.includes('#work') ? 'active' : ''}>
                 <img src='assets/images/icons/desitnation-icon.svg' alt='Work' />
                 Work
               </a>
             </Link>
           </li>
           <li>
-            <Link href='/tour-package'>
-              <a className={router.pathname.includes('/tour-package') ? 'active' : ''}>
+            <Link href='#experiences'>
+              <a className={router.pathname.includes('#experiences') ? 'active' : ''}>
                 <img src='assets/images/icons/tour-icon.svg' alt='Experiences' />
                 Experiences
               </a>
             </Link>
           </li>
           <li>
-            <Link href='/about'>
-              <a
-                className={
-                  router.pathname.includes('/about') ||
-                  router.pathname.includes('/tour-guide') ||
-                  router.pathname.includes('/gallery') ||
-                  router.pathname.includes('/faq') ||
-                  router.pathname.includes('/error')
-                    ? 'active'
-                    : ''
-                }
-              >
+            <Link href='#testimonials'>
+              <a className={router.pathname.includes('#testimonials') ? 'active' : ''}>
                 <img src='assets/images/icons/pages.svg' alt='Testimonials' />
                 Testimonials
               </a>
             </Link>
           </li>
           <li>
-            <Link href='/contact'>
-              <a className={router.pathname === '/contact' ? 'active' : ''}>
+            <Link href='#contact'>
+              <a className={router.pathname === '#contact' ? 'active' : ''}>
                 <img src='assets/images/icons/contact-icon.svg' alt='Contact' />
                 Contact
               </a>

@@ -2,6 +2,7 @@ import React from 'react';
 import SwiperCore, { Autoplay, Navigation, Pagination } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
 SwiperCore.use([Navigation, Pagination, Autoplay]);
+
 function Home2Testimonial() {
   const testimonial2Slider = {
     slidesPerView: 'auto',
@@ -41,7 +42,7 @@ function Home2Testimonial() {
     },
   };
   return (
-    <div className='testimonial-section pb-120   position-relative'>
+    <div className='testimonial-section pb-120   position-relative' id='testimonials'>
       <div className='container'>
         <div className='row justify-content-center'>
           <div className='col-md-6 text-center'>

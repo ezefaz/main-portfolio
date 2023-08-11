@@ -20,6 +20,7 @@ import ContactForm from '../components/contact/ContactForm';
 import Modal from '../components/modal/Modal';
 import MainNav from '../components/header/MainNav';
 import ScrollProgrssBtn from '../components/common/ScrollProgrssBtn';
+import Timeline from '../components/packageDetails/Plan';
 
 function IndexCityTour() {
   const projectImages = [
@@ -144,6 +145,8 @@ function IndexCityTour() {
               <HeroSection />
               <LatestWork />
               <AboutSection />
+              {/* <Timeline /> */}
+              <Timeline />
               {/* <Home3Destination /> */}
               <Services />
               <TechStack />

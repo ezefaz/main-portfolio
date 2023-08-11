@@ -24,7 +24,7 @@ function Home3Offer() {
   };
 
   return (
-    <div className='offer-section sibling-2 pt-120 pb-120'>
+    <div className='offer-section sibling-2 pt-120 pb-120' id='work'>
       <div className='container'>
         <div className='row justify-content-center'>
           <div className='col-md-6 text-center'>
