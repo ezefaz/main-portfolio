@@ -41,6 +41,46 @@ function Home2Testimonial() {
       },
     },
   };
+
+  const testimonialSlides = [
+    {
+      author: 'Jhoskar',
+      role: 'Developer',
+      content:
+        '“Ezequiel is an excellent programmer, has a great capacity for learning and has great creativity. He can offer the most optimal solution for any problem or task assigned to him and has great potential for the frontend!”',
+    },
+    {
+      author: 'Miguel',
+      role: 'Developer',
+      content:
+        '“I was part of the same team as Ezequiel in a project and he was a key person in the frontend, he is a genius, he had initiative when looking for different tools and implementing them in the project giving the page a great visual aspect. He is a self-taught person who strives to fulfill his goals. He is also an excellent colleague and human being. It was a pleasure working with him.”',
+    },
+    {
+      author: 'Tomas',
+      role: 'Developer',
+      content:
+        '“Ezequiel is an excellent colleague, I shared a team with him, although not in the same sector within the project, beyond this I could see that he knows how to handle himself very well within a team. He is a design specialist, he likes things to look good and I notice good UX/UI oriented programming. On the other hand, Ezequiel handles good communication, listens actively and he is always willing to learn new tools.”',
+    },
+    {
+      author: 'Jessica',
+      role: 'Tech Leader',
+      content:
+        '“Ezequiel is a very serious developer of excellent quality. He is creative, self-taught and decisive. He knows how to carry out intuitive and attractive designs. Thanks to the fact that it is aware of the needs of the client, it manages to achieve the maximum experience for the user. I highlight his active listening, good companionship, and joy. He also knows how to ask for help when necessary!”',
+    },
+    {
+      author: 'Pablo',
+      role: 'Developer',
+      content:
+        '“Ezequiel worked very efficiently, always focusing on the details of the work. He also adapted very well to the team work. He knew how to apply his skills on the required tasks to reach our goals. I strongly recommend his skills.”',
+    },
+    {
+      author: 'Alejandro',
+      role: 'Developer',
+      content:
+        '“Eze is an excellent professional not only technically but also socially, he works in a team, is self-taught and is also a crack at Frontend. A great pleasure working with him.”',
+    },
+  ];
+
   return (
     <div className='testimonial-section pb-120   position-relative' id='testimonials'>
       <div className='container'>
@@ -58,139 +98,48 @@ function Home2Testimonial() {
         <div className='row'>
           <div className='col-12'>
             <Swiper {...testimonial2Slider} className='swiper testimonial2-slider'>
+              <div className='col-lg-6 col-md-4'>
+                <div className='slider-arrows arrows-style-4 d-md-flex d-none flex-row gap-5'>
+                  <div
+                    className='package2-prev swiper-prev-arrow'
+                    tabIndex={0}
+                    role='button'
+                    aria-label='Previous slide'
+                  >
+                    <i className='bi bi-arrow-left' />
+                  </div>
+                  <div className='package2-next swiper-next-arrow' tabIndex={0} role='button' aria-label='Next slide'>
+                    <i className='bi bi-arrow-right' />
+                  </div>
+                </div>
+              </div>
               <div className='swiper-wrapper'>
-                <SwiperSlide className='swiper-slide'>
-                  <div className='testimonial-single1 siblling-2'>
-                    <svg width={238} height={238} viewBox='0 0 238 238' xmlns='http://www.w3.org/2000/svg'>
-                      <g opacity='0.05'>
-                        <path d='M65.45 15.6653C64.7992 16.409 52.5273 31.7954 38.1637 49.8778C17.4781 76.002 12.0859 83.1141 12.0859 84.1368C12.0859 85.2524 12.7832 86.0426 16.1301 88.8317C18.4078 90.6446 23.1492 95.1536 26.7285 98.7329C41.2316 113.375 49.7383 127.693 52.7133 142.335C53.6895 146.984 53.6895 156.141 52.7133 161.812C49.8313 178.825 38.5355 199.232 22.6844 216.152C20.0348 218.941 19.0586 220.336 19.0586 221.219C19.0586 224.241 21.1969 224.287 28.0766 221.405C47.6 213.177 67.2164 200.115 81.5801 185.705C100.174 167.111 111.051 146.751 115.56 122.254C116.862 115.328 116.769 102.173 115.374 95.386C110.029 68.9829 95.2 41.836 73.9102 19.384C68.6109 13.8059 67.5883 13.3876 65.45 15.6653ZM74.7004 28.1231C90.6445 46.5774 102.452 67.4024 108.076 87.1118C113.004 104.497 112.632 118.07 106.635 136.432C96.827 166.414 72.3297 193.003 38.1172 210.76C32.9574 213.456 32.0277 213.782 32.7715 212.806C41.557 201.324 44.8574 196.304 48.9945 188.262C53.55 179.29 56.7109 169.761 58.152 160.743C59.0352 154.932 58.4773 143.451 57.0363 137.966C53.1316 123.137 44.532 109.145 30.7262 95.293C26.9609 91.5278 22.6379 87.3442 21.0574 85.9497L18.1754 83.4395L43.091 52.1555L67.9602 20.8715L69.1223 21.9407C69.773 22.545 72.2832 25.2876 74.7004 28.1231Z' />
-                        <path d='M174.688 15.6652C174.037 16.4089 161.766 31.7953 147.402 49.8777C126.716 76.0019 121.324 83.114 121.324 84.1367C121.324 85.2523 122.021 86.0425 125.415 88.8316C127.646 90.6445 132.387 95.1535 135.967 98.7327C150.47 113.375 158.977 127.693 161.952 142.335C162.928 146.984 162.928 156.141 161.952 161.812C161.068 166.879 158.698 174.688 156.188 180.452C151.307 191.701 141.452 206.112 131.318 216.803C129.18 219.081 128.297 220.382 128.297 221.266C128.297 224.241 130.435 224.287 137.315 221.405C161.44 211.271 185.705 193.514 200.441 175.246C211.132 161.998 219.267 145.868 223.079 130.389C225.17 121.928 225.635 118.07 225.635 109.006C225.635 101.15 225.542 99.523 224.38 94.3167C218.755 68.0066 204.206 41.557 183.148 19.3839C177.849 13.8058 176.827 13.3875 174.688 15.6652ZM186.356 30.9121C206.67 55.2699 219.732 84.0902 220.661 106.449C221.312 121.975 216.106 140.615 206.623 156.838C193.84 178.779 171.992 198.442 145.868 211.55C141.824 213.596 141.312 213.735 142.056 212.759C151.353 200.673 154.607 195.653 158.977 186.635C162.416 179.616 164.834 172.968 166.507 165.949C167.39 162.091 167.53 160.278 167.53 152.004C167.53 143.172 167.437 142.149 166.321 137.966C162.23 122.905 153.724 109.145 139.964 95.2929C136.199 91.5277 131.876 87.3441 130.296 85.9495L127.414 83.4394L152.376 52.1089L177.291 20.732L180.266 23.9859C181.94 25.7523 184.682 28.8667 186.356 30.9121Z' />
-                      </g>
-                    </svg>
-                    <ul className='star-list'>
-                      <li>
-                        <i className='bi bi-star-fill' />
-                      </li>
-                      <li>
-                        <i className='bi bi-star-fill' />
-                      </li>
-                      <li>
-                        <i className='bi bi-star-fill' />
-                      </li>
-                      <li>
-                        <i className='bi bi-star-fill' />
-                      </li>
-                      <li>
-                        <i className='bi bi-star-half' />
-                      </li>
-                    </ul>
-                    <p>
-                      “This place is great! I had a very pleasant stay here. Great stuff and beautiful suites with a
-                      fabulous view etiam rhoncus maecenas”!
-                    </p>
-                    <div className='testi-author'>
-                      <div className='image'>
-                        <img src='assets/images/bg/testi11.png' alt='image' />
-                      </div>
-                      <div className='author-text'>
-                        <h5>Johan Martin Sr</h5>
-                        <p>South America.</p>
+                {testimonialSlides.map((slide, index) => (
+                  <SwiperSlide key={index} className='swiper-slide'>
+                    <div className='testimonial-single1 siblling-2'>
+                      <svg width={238} height={238} viewBox='0 0 238 238' xmlns='http://www.w3.org/2000/svg'>
+                        {/* ... SVG path here ... */}
+                      </svg>
+                      <ul className='star-list'>
+                        {Array.from({ length: 5 }, (_, index) => (
+                          <li key={index}>
+                            <i className='bi bi-star-fill' />
+                          </li>
+                        ))}
+                      </ul>
+
+                      <p className='fs-4'>{slide.content}</p>
+                      <div className='testi-author'>
+                        <div className='author-text'>
+                          <h5>{slide.author}</h5>
+                          <p>{slide.role}</p>
+                        </div>
                       </div>
                     </div>
-                  </div>
-                </SwiperSlide>
-                <SwiperSlide className='swiper-slide'>
-                  <div className='testimonial-single1 siblling-2'>
-                    <svg width={238} height={238} viewBox='0 0 238 238' xmlns='http://www.w3.org/2000/svg'>
-                      <g opacity='0.05'>
-                        <path d='M65.45 15.6653C64.7992 16.409 52.5273 31.7954 38.1637 49.8778C17.4781 76.002 12.0859 83.1141 12.0859 84.1368C12.0859 85.2524 12.7832 86.0426 16.1301 88.8317C18.4078 90.6446 23.1492 95.1536 26.7285 98.7329C41.2316 113.375 49.7383 127.693 52.7133 142.335C53.6895 146.984 53.6895 156.141 52.7133 161.812C49.8313 178.825 38.5355 199.232 22.6844 216.152C20.0348 218.941 19.0586 220.336 19.0586 221.219C19.0586 224.241 21.1969 224.287 28.0766 221.405C47.6 213.177 67.2164 200.115 81.5801 185.705C100.174 167.111 111.051 146.751 115.56 122.254C116.862 115.328 116.769 102.173 115.374 95.386C110.029 68.9829 95.2 41.836 73.9102 19.384C68.6109 13.8059 67.5883 13.3876 65.45 15.6653ZM74.7004 28.1231C90.6445 46.5774 102.452 67.4024 108.076 87.1118C113.004 104.497 112.632 118.07 106.635 136.432C96.827 166.414 72.3297 193.003 38.1172 210.76C32.9574 213.456 32.0277 213.782 32.7715 212.806C41.557 201.324 44.8574 196.304 48.9945 188.262C53.55 179.29 56.7109 169.761 58.152 160.743C59.0352 154.932 58.4773 143.451 57.0363 137.966C53.1316 123.137 44.532 109.145 30.7262 95.293C26.9609 91.5278 22.6379 87.3442 21.0574 85.9497L18.1754 83.4395L43.091 52.1555L67.9602 20.8715L69.1223 21.9407C69.773 22.545 72.2832 25.2876 74.7004 28.1231Z' />
-                        <path d='M174.688 15.6652C174.037 16.4089 161.766 31.7953 147.402 49.8777C126.716 76.0019 121.324 83.114 121.324 84.1367C121.324 85.2523 122.021 86.0425 125.415 88.8316C127.646 90.6445 132.387 95.1535 135.967 98.7327C150.47 113.375 158.977 127.693 161.952 142.335C162.928 146.984 162.928 156.141 161.952 161.812C161.068 166.879 158.698 174.688 156.188 180.452C151.307 191.701 141.452 206.112 131.318 216.803C129.18 219.081 128.297 220.382 128.297 221.266C128.297 224.241 130.435 224.287 137.315 221.405C161.44 211.271 185.705 193.514 200.441 175.246C211.132 161.998 219.267 145.868 223.079 130.389C225.17 121.928 225.635 118.07 225.635 109.006C225.635 101.15 225.542 99.523 224.38 94.3167C218.755 68.0066 204.206 41.557 183.148 19.3839C177.849 13.8058 176.827 13.3875 174.688 15.6652ZM186.356 30.9121C206.67 55.2699 219.732 84.0902 220.661 106.449C221.312 121.975 216.106 140.615 206.623 156.838C193.84 178.779 171.992 198.442 145.868 211.55C141.824 213.596 141.312 213.735 142.056 212.759C151.353 200.673 154.607 195.653 158.977 186.635C162.416 179.616 164.834 172.968 166.507 165.949C167.39 162.091 167.53 160.278 167.53 152.004C167.53 143.172 167.437 142.149 166.321 137.966C162.23 122.905 153.724 109.145 139.964 95.2929C136.199 91.5277 131.876 87.3441 130.296 85.9495L127.414 83.4394L152.376 52.1089L177.291 20.732L180.266 23.9859C181.94 25.7523 184.682 28.8667 186.356 30.9121Z' />
-                      </g>
-                    </svg>
-                    <ul className='star-list'>
-                      <li>
-                        <i className='bi bi-star-fill' />
-                      </li>
-                      <li>
-                        <i className='bi bi-star-fill' />
-                      </li>
-                      <li>
-                        <i className='bi bi-star-fill' />
-                      </li>
-                      <li>
-                        <i className='bi bi-star-fill' />
-                      </li>
-                      <li>
-                        <i className='bi bi-star-half' />
-                      </li>
-                    </ul>
-                    <p>
-                      “combined with a handful of model sentence structures, to generate Lorem Ipsum which looks
-                      reasonable. The generated therefore”!
-                    </p>
-                    <div className='testi-author'>
-                      <div className='image'>
-                        <img src='assets/images/bg/testi12.png' alt='image' />
-                      </div>
-                      <div className='author-text'>
-                        <h5>Angelo Mathes</h5>
-                        <p>South Africe.</p>
-                      </div>
-                    </div>
-                  </div>
-                </SwiperSlide>
-                <SwiperSlide className='swiper-slide'>
-                  <div className='testimonial-single1 siblling-2'>
-                    <svg width={238} height={238} viewBox='0 0 238 238' xmlns='http://www.w3.org/2000/svg'>
-                      <g opacity='0.05'>
-                        <path d='M65.45 15.6653C64.7992 16.409 52.5273 31.7954 38.1637 49.8778C17.4781 76.002 12.0859 83.1141 12.0859 84.1368C12.0859 85.2524 12.7832 86.0426 16.1301 88.8317C18.4078 90.6446 23.1492 95.1536 26.7285 98.7329C41.2316 113.375 49.7383 127.693 52.7133 142.335C53.6895 146.984 53.6895 156.141 52.7133 161.812C49.8313 178.825 38.5355 199.232 22.6844 216.152C20.0348 218.941 19.0586 220.336 19.0586 221.219C19.0586 224.241 21.1969 224.287 28.0766 221.405C47.6 213.177 67.2164 200.115 81.5801 185.705C100.174 167.111 111.051 146.751 115.56 122.254C116.862 115.328 116.769 102.173 115.374 95.386C110.029 68.9829 95.2 41.836 73.9102 19.384C68.6109 13.8059 67.5883 13.3876 65.45 15.6653ZM74.7004 28.1231C90.6445 46.5774 102.452 67.4024 108.076 87.1118C113.004 104.497 112.632 118.07 106.635 136.432C96.827 166.414 72.3297 193.003 38.1172 210.76C32.9574 213.456 32.0277 213.782 32.7715 212.806C41.557 201.324 44.8574 196.304 48.9945 188.262C53.55 179.29 56.7109 169.761 58.152 160.743C59.0352 154.932 58.4773 143.451 57.0363 137.966C53.1316 123.137 44.532 109.145 30.7262 95.293C26.9609 91.5278 22.6379 87.3442 21.0574 85.9497L18.1754 83.4395L43.091 52.1555L67.9602 20.8715L69.1223 21.9407C69.773 22.545 72.2832 25.2876 74.7004 28.1231Z' />
-                        <path d='M174.688 15.6652C174.037 16.4089 161.766 31.7953 147.402 49.8777C126.716 76.0019 121.324 83.114 121.324 84.1367C121.324 85.2523 122.021 86.0425 125.415 88.8316C127.646 90.6445 132.387 95.1535 135.967 98.7327C150.47 113.375 158.977 127.693 161.952 142.335C162.928 146.984 162.928 156.141 161.952 161.812C161.068 166.879 158.698 174.688 156.188 180.452C151.307 191.701 141.452 206.112 131.318 216.803C129.18 219.081 128.297 220.382 128.297 221.266C128.297 224.241 130.435 224.287 137.315 221.405C161.44 211.271 185.705 193.514 200.441 175.246C211.132 161.998 219.267 145.868 223.079 130.389C225.17 121.928 225.635 118.07 225.635 109.006C225.635 101.15 225.542 99.523 224.38 94.3167C218.755 68.0066 204.206 41.557 183.148 19.3839C177.849 13.8058 176.827 13.3875 174.688 15.6652ZM186.356 30.9121C206.67 55.2699 219.732 84.0902 220.661 106.449C221.312 121.975 216.106 140.615 206.623 156.838C193.84 178.779 171.992 198.442 145.868 211.55C141.824 213.596 141.312 213.735 142.056 212.759C151.353 200.673 154.607 195.653 158.977 186.635C162.416 179.616 164.834 172.968 166.507 165.949C167.39 162.091 167.53 160.278 167.53 152.004C167.53 143.172 167.437 142.149 166.321 137.966C162.23 122.905 153.724 109.145 139.964 95.2929C136.199 91.5277 131.876 87.3441 130.296 85.9495L127.414 83.4394L152.376 52.1089L177.291 20.732L180.266 23.9859C181.94 25.7523 184.682 28.8667 186.356 30.9121Z' />
-                      </g>
-                    </svg>
-                    <ul className='star-list'>
-                      <li>
-                        <i className='bi bi-star-fill' />
-                      </li>
-                      <li>
-                        <i className='bi bi-star-fill' />
-                      </li>
-                      <li>
-                        <i className='bi bi-star-fill' />
-                      </li>
-                      <li>
-                        <i className='bi bi-star-fill' />
-                      </li>
-                      <li>
-                        <i className='bi bi-star-half' />
-                      </li>
-                    </ul>
-                    <p>
-                      “But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was
-                      born and I will give you.”!
-                    </p>
-                    <div className='testi-author'>
-                      <div className='image'>
-                        <img src='assets/images/bg/testi11.png' alt='image' />
-                      </div>
-                      <div className='author-text'>
-                        <h5>David Mortana</h5>
-                        <p>Australia.</p>
-                      </div>
-                    </div>
-                  </div>
-                </SwiperSlide>
+                  </SwiperSlide>
+                ))}
               </div>
             </Swiper>
-            <div className='col-lg-6 col-md-4'>
-              <div className='slider-arrows arrows-style-4 text-center d-md-flex d-none flex-row gap-5 justify-content-end align-items-center pt-1'>
-                <div className='package2-prev swiper-prev-arrow' tabIndex={0} role='button' aria-label='Previous slide'>
-                  <i className='bi bi-arrow-left' />
-                </div>
-                <div className='package2-next swiper-next-arrow' tabIndex={0} role='button' aria-label='Next slide'>
-                  <i className='bi bi-arrow-right' />
-                </div>
-              </div>
-            </div>
           </div>
         </div>
       </div>

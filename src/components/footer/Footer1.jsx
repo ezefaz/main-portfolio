@@ -189,22 +189,22 @@ function Footer1() {
             <div className='col-lg-6 d-flex justify-content-lg-start justify-content-center text-lg-start text-center px-1'>
               <p>
                 Copyright 2022{' '}
-                <a href='#' className='egns-lab'>
+                <a href='#about' className='egns-lab'>
                   Ezequiel Fasczczak{' '}
                 </a>{' '}
-                {/* | Design By{' '}
-                <a href='https://themeforest.net/category/site-templates?term=egenslab' className='egns-lab'>
-                  Egens Lab
-                </a> */}
               </p>
             </div>
             <div className='col-lg-6 d-flex justify-content-lg-end justify-content-center align-items-center'>
-              <ul className='f-bottom-list d-flex jusify-content-start align-items-center'>
-                <li>
-                  <a href='#'>Privacy Policy</a>
+              <ul className='flex gap-3'>
+                <li className='group'>
+                  <a href='https://github.com/ezefaz/' target='blank'>
+                    <i className='bx bxl-github text-white fs-2 group-hover:text-yellow-500' />
+                  </a>
                 </li>
-                <li>
-                  <a href='#'>Terms of Use</a>
+                <li className='group'>
+                  <a href='https://www.linkedin.com/in/ezequiel-faszczak-1537b01bb/' target='blank'>
+                    <i className='bx bxl-linkedin text-white fs-2 group-hover:text-blue-500' />
+                  </a>
                 </li>
               </ul>
             </div>

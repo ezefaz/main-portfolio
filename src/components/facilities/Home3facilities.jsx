@@ -1,10 +1,13 @@
 import React from 'react';
+import { FaCode, FaDatabase, FaReact, FaNode } from 'react-icons/fa';
+import { AiFillGithub } from 'react-icons/ai';
+import { GiMatterStates } from 'react-icons/gi';
 
-function Facility({ iconSrc, title, description }) {
+function Facility({ icon, title, description }) {
   return (
     <div className='facility-single col-lg-4 col-md-6 col-sm-10'>
       <div className='icon'>
-        <img src={iconSrc} alt='image' />
+        <span className='icon'>{icon}</span>
       </div>
       <div className='text'>
         <h4>{title}</h4>
@@ -17,34 +20,34 @@ function Facility({ iconSrc, title, description }) {
 function Home3facilities() {
   const facilitiesData = [
     {
-      iconSrc: 'assets/images/icons/facility1.svg',
-      title: 'Frameworks',
-      description: 'React Js, Next Js',
+      icon: <FaReact size='3em' />,
+      title: 'Front-End',
+      description: 'React Js, Next Js, Vue Js',
     },
     {
-      iconSrc: 'assets/images/icons/facility2.svg',
-      title: 'Next Js',
-      description: 'Lorem ipsum dolor sit amet, stsrf consec adi piscing elit',
+      icon: <FaNode size='3em' />,
+      title: 'Back-End',
+      description: 'Node js, Express Js, Prisma, Sequelize',
     },
     {
-      iconSrc: 'assets/images/icons/facility3.svg',
-      title: 'Node Js',
-      description: 'Lorem ipsum dolor sit amet, stsrf consec adi piscing elit',
-    },
-    {
-      iconSrc: 'assets/images/icons/facility4.svg',
+      icon: <GiMatterStates size='3em' />,
       title: 'State Management',
-      description: 'Redux, Zustand',
+      description: 'Redux, Zustand, Vuex',
     },
     {
-      iconSrc: 'assets/images/icons/facility5.svg',
-      title: 'SQL',
-      description: 'Lorem ipsum dolor sit amet, stsrf consec adi piscing elit',
+      icon: <FaDatabase size='3em' />,
+      title: 'Databases',
+      description: 'MySQL, PostgreSQL, MongoDB',
     },
     {
-      iconSrc: 'assets/images/icons/facility6.svg',
+      icon: <FaCode size='3em' />,
       title: 'Testing',
       description: 'Cypress, Mocha',
+    },
+    {
+      icon: <AiFillGithub size='3em' />,
+      title: 'Version Control',
+      description: 'Git, Github',
     },
   ];
 
@@ -61,12 +64,7 @@ function Home3facilities() {
         </div>
         <div className='row g-4 justify-content-center'>
           {facilitiesData.map((facility, index) => (
-            <Facility
-              key={index}
-              iconSrc={facility.iconSrc}
-              title={facility.title}
-              description={facility.description}
-            />
+            <Facility key={index} icon={facility.icon} title={facility.title} description={facility.description} />
           ))}
         </div>
       </div>

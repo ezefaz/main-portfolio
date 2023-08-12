@@ -11,13 +11,17 @@ function Home3Feature({ padding = '' }) {
               <span>Nice to Meet You!</span>
               <h2>Ezequiel Faszczak</h2>
               <p>
-                Hello there! My name is Ezequiel Faszczak. I am a web designer & developer, and Im very passionate and
-                dedicated to my work.
+                Greetings! I’m Ezequiel Faszczak, a proficient web designer and developer with an unwavering passion for
+                my craft.
               </p>
               <p>
-                With more than 3 years experience as a professional developer, I have acquired the skills and knowledge
-                necessary to make your project a success. I enjoy every step of the development process, from discussion
-                and collaboration.
+                With over 3 years of experience in the industry, I’ve honed the skills and expertise needed to transform
+                your project into a triumph. I take immense pleasure in every facet of the development journey, from
+                brainstorming and working collaboratively with you, to bringing innovative ideas to life. My commitment
+                to excellence ensures that your vision will not only be realized but elevated to new heights.
+              </p>
+              <p>
+                Let’s embark on this exciting journey together, turning your ideas into compelling digital realities!
               </p>
             </div>
             <ul className='feature3-list'>
@@ -30,7 +34,7 @@ function Home3Feature({ padding = '' }) {
                   className='eg-btn btn--primary2 sibling-2 btn--lg'
                   style={{ marginRight: '2rem', fontSize: '1.5rem' }}
                 >
-                  Lets Talk
+                  Let’s Talk
                 </a>
               </Link>
               <a

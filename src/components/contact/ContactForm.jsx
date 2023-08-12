@@ -2,7 +2,7 @@ import React from 'react';
 
 function ContactForm() {
   return (
-    <div className='contact-section pb-120' id='contact'>
+    <div className='contact-section p-10' id='contact'>
       <div className='container'>
         <div className='row justify-content-center'>
           <div className='col-md-6 text-center'>

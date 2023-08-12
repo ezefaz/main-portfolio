@@ -28,6 +28,7 @@ function MainNav() {
 
   const [state, dispatch] = useReducer(reducer, initialState);
   const [showMobileMenu, setMobileMenu] = useState(false);
+
   const [loading, setLoading] = useState();
 
   useEffect(() => {
@@ -39,11 +40,7 @@ function MainNav() {
 
   // sidebar menu hnadle function
   const handleMobileMenu = () => {
-    if (showMobileMenu === false || showMobileMenu === 0) {
-      setMobileMenu(1);
-    } else {
-      setMobileMenu(false);
-    }
+    setMobileMenu(!showMobileMenu);
   };
 
   return (
@@ -57,14 +54,13 @@ function MainNav() {
             <Link href='/'>
               <a className={router.pathname === '/' ? 'active' : ''}>
                 <img src='assets/images/icons/home-icon.svg' alt='Home' />
-                Home
               </a>
             </Link>
           </li>
           <li>
             <Link href='#work'>
               <a className={router.pathname.includes('#work') ? 'active' : ''}>
-                <img src='assets/images/icons/desitnation-icon.svg' alt='Work' />
+                {/* <img src='assets/images/icons/desitnation-icon.svg' alt='Work' /> */}
                 Work
               </a>
             </Link>
@@ -72,15 +68,23 @@ function MainNav() {
           <li>
             <Link href='#experiences'>
               <a className={router.pathname.includes('#experiences') ? 'active' : ''}>
-                <img src='assets/images/icons/tour-icon.svg' alt='Experiences' />
+                {/* <img src='assets/images/icons/tour-icon.svg' alt='Experiences' /> */}
                 Experiences
+              </a>
+            </Link>
+          </li>
+          <li>
+            <Link href='#services'>
+              <a className={router.pathname.includes('#services') ? 'active' : ''}>
+                {/* <img src='assets/images/icons/tour-icon.svg' alt='Experiences' /> */}
+                Services
               </a>
             </Link>
           </li>
           <li>
             <Link href='#testimonials'>
               <a className={router.pathname.includes('#testimonials') ? 'active' : ''}>
-                <img src='assets/images/icons/pages.svg' alt='Testimonials' />
+                {/* <img src='assets/images/icons/pages.svg' alt='Testimonials' /> */}
                 Testimonials
               </a>
             </Link>
@@ -88,7 +92,7 @@ function MainNav() {
           <li>
             <Link href='#contact'>
               <a className={router.pathname === '#contact' ? 'active' : ''}>
-                <img src='assets/images/icons/contact-icon.svg' alt='Contact' />
+                {/* <img src='assets/images/icons/contact-icon.svg' alt='Contact' /> */}
                 Contact
               </a>
             </Link>
