@@ -1,8 +1,12 @@
 export const offers = [
   {
-    imageSrc: 'assets/images/bg/offer-bg1.png',
-    images: ['assets/images/bg/offer-bg1.png', 'assets/images/bg/offer-bg2.png', 'assets/images/bg/offer-bg3.png'],
-    badgeSrc: 'assets/images/bg/offer-bg4.png',
+    imageSrc: 'assets/images/bg/palermo-jai.jpg',
+    images: [
+      'assets/images/bg/palermo-jai2.jpg',
+      'assets/images/bg/palermo-jai2.jpg',
+      'assets/images/bg/palermo-jai2.jpg',
+    ],
+    badgeSrc: 'assets/images/bg/palermo-jai2.jpg',
     reviewCount: 10,
     category: 'Rental Apartment',
     title: 'Palermojai',
@@ -12,16 +16,32 @@ export const offers = [
     technologies: 'React, Node.js, MongoDB',
   },
   {
-    imageSrc: 'assets/images/bg/offer-bg2.png',
-    images: ['assets/images/bg/offer-bg4.png'],
-    badgeSrc: 'assets/images/bg/offer-badge2.svg',
+    imageSrc: 'assets/images/bg/webgeenix-bg.jpg',
+    images: [
+      'assets/images/bg/webgeenix-3.jpg',
+      'assets/images/bg/webgeenix-3.jpg',
+      'assets/images/bg/webgeenix-2.jpg',
+    ],
+    badgeSrc: 'assets/images/bg/webgeenix-2.jpg',
     reviewCount: 10,
     title: 'WebGeenix',
     duration: '5 days / from $900',
-    category: 'Agency',
+    category: 'Digital Agency',
     description:
       'WebGeenix is a full-stack web development agency. We create dynamic and responsive websites that empower businesses to succeed online. Let us bring your digital vision to life!',
     technologies: 'HTML, CSS, JavaScript, React, Node.js',
+  },
+  {
+    imageSrc: 'assets/images/bg/psicoapp-bg1.jpg',
+    images: ['assets/images/bg/psicoapp-3.jpg', 'assets/images/bg/psicoapp-bg.jpg', 'assets/images/bg/psicoapp-3.jpg'],
+    badgeSrc: 'assets/images/bg/psicoapp-bg.jpg',
+    reviewCount: 10,
+    title: 'PsicoApp',
+    duration: '5 days / from $900',
+    category: 'All in one platform',
+    description:
+      'Participation on the development of an application that helps psychologists find clients and grow their carrer. In which agile methodologies SCRUM are used, and once a week the proyect were presented to the product owner.',
+    technologies: 'React, JavaScript, Tailwind, Socket IO, Redux, Github, Scrum, Node.js',
   },
   // Add more projects following the same structure
 ];

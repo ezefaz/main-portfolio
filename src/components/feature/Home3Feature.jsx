@@ -9,10 +9,10 @@ function Home3Feature({ padding = '' }) {
           <div className='col-lg-6 ps-lg-5'>
             <div className='about3-title text-start'>
               <span>Nice to Meet You!</span>
-              <h2>Ezequiel Faszczak</h2>
+              <h2>About Me</h2>
               <p>
-                Greetings! I’m Ezequiel Faszczak, a proficient web designer and developer with an unwavering passion for
-                my craft.
+                Greetings! I’m Ezequiel Faszczak, a proficient Full Stack Developer and designer with an unwavering
+                passion for my craft.
               </p>
               <p>
                 With over 3 years of experience in the industry, I’ve honed the skills and expertise needed to transform
@@ -53,10 +53,10 @@ function Home3Feature({ padding = '' }) {
                 <img src='assets/images/icons/feature3-icon.svg' alt='' />
               </div> */}
               <div className='feature-image'>
-                <img src='assets/images/bg/feature3.png' className='img-fluid' alt='image' />
+                <img src='assets/images/bg/opcion1.jpg' className='img-fluid h-[100%]' alt='image' />
               </div>
               <div className='feature-image translate-y'>
-                <img src='assets/images/bg/feature4.png' className='img-fluid' alt='image' />
+                <img src='assets/images/bg/yo.jpeg' className='img-fluid h-[100%]' alt='image' />
               </div>
             </div>
           </div>
