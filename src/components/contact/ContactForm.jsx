@@ -1,5 +1,3 @@
-import React from 'react';
-
 function ContactForm() {
   return (
     <div className='contact-section p-10' id='contact'>

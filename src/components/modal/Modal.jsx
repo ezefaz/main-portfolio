@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import React, { useCallback, useEffect } from 'react';
 
 const Modal = ({ project, isOpen, onClose, disabled }) => {
@@ -61,6 +62,17 @@ const Modal = ({ project, isOpen, onClose, disabled }) => {
             <div className='col-span-12 md:col-span-8'>
               <h3 className='text-xxl font-bold text-gray-900 mb-2'>{project.title}</h3>
               <div className='text-xl text-gray-600 leading-relaxed mb-4'>{project.description}</div>
+              {project.link ? (
+                <Link href={project.link}>
+                  <a
+                    target='_blank'
+                    rel='noopener noreferrer'
+                    className='text-blue-500 hover:underline font-bold text-lg'
+                  >
+                    Check the full project here!
+                  </a>
+                </Link>
+              ) : null}
             </div>
             <div className='col-span-12 md:col-span-4'>
               {/* Tech Stack */}
