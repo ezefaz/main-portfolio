@@ -6,7 +6,7 @@ function HeroSection() {
 
   return (
     <div className='banner-section3 overflow-hidden position-relative ml-230'>
-      <img src='assets/images/slider/home03/image02.jpg' className='banner-bg31' alt='image' />
+      <img src='assets/images/slider/home03/developer-banner.png' className='banner-bg31' alt='image' />
       <div className='container'>
         <div className='row justify-content-center align-items-center g-4'>
           <div className='col-xl-8 col-lg-9 col-md-11 text-center'>
