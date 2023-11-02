@@ -46,5 +46,17 @@ export const offers = [
       'Participation on the development of an application that helps psychologists find clients and grow their carrer. In which agile methodologies SCRUM are used, and once a week the proyect were presented to the product owner.',
     technologies: 'React, JavaScript, Tailwind, Socket IO, Redux, Github, Scrum, Node.js',
   },
-  // Add more projects following the same structure
+  {
+    imageSrc: 'assets/images/bg/savemelin1.jpg',
+    images: ['assets/images/bg/savemelin2.jpg', 'assets/images/bg/savemelin3.jpg', 'assets/images/bg/savemelin2.jpg'],
+    badgeSrc: 'assets/images/bg/savemelin2.jpg',
+    reviewCount: 10,
+    title: 'Savemelin',
+    link: 'https://savemelin.vercel.app/',
+    duration: '14 days ',
+    category: 'Smart Savings App',
+    description:
+      'Development of an app that allows users to save money on their mercadolibre purchases. The user can insert a mercadolibre products link, and the platform will scrape the data from the provided link. But it not only will scrape the product info, it will scrape the current dolar value, so the user can know the real value of the product, also know the higher, lower and average price. If the user requires, he can follow up a list of products, and he will receive an email when the product have an specific discount, reached the lower price or is back on stock. This allows the user to have more info before making a purchase. On the other side, the user has also a panel when he can see the entire list of products and have a more global vision about their favourite products. About the data, I make a CRON function that it executes every day so the product and dolar price are updated, and this variations are reflected on dashboards. ',
+    technologies: 'React, NextJs, Tailwind, Mongo Db, Next-Auth, Github, Node.js',
+  },
 ];

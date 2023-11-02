@@ -38,7 +38,7 @@ function Home3Feature({ padding = '' }) {
                 </a>
               </Link>
               <a
-                href='assets/pdfs/Ezequiel Faszczak - Full Stack Developer.pdf'
+                href='assets/pdfs/Full Stack Developer - Ezequiel Faszczak.pdf'
                 className='eg-btn btn--primary3-outline sibling-2 btn--lg'
                 style={{ fontSize: '1.5rem' }}
                 download
