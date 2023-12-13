@@ -59,7 +59,7 @@ function Home3Package() {
         <div className='row justify-content-start align-items-center mb-60'>
           <div className='col-lg-6 col-md-8 text-md-start text-center'>
             <div className='section-title3 d-flex flex-column justify-content-center mb-0'>
-              <span>Feature Services</span>
+              <span>Featured Services</span>
               <h2>My Services</h2>
             </div>
           </div>
@@ -84,6 +84,8 @@ function Home3Package() {
               spaceBetween={25}
               grabCursor={true}
               freeModeMomentum={false}
+              autoplay={true}
+              swipeHandler={true}
               navigation={{
                 nextEl: '.package2-prev',
                 prevEl: '.package2-next',
